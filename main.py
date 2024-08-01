@@ -2,9 +2,9 @@ import os
 from train import Trainer
 
 def main():
-    in_ecg_path = '/Users/harshbalgude/Desktop/hb/CufflessBP/combined/unet/ecg_sig_1.txt'
-    in_wout_ecg_path = '/Users/harshbalgude/Desktop/hb/CufflessBP/combined/unet/ecg_labels_1.txt'
-    output_path = '/Users/harshbalgude/Desktop/hb/CufflessBP/combined/unet/model_out'
+    in_ecg_path = 'path/to/signal'
+    in_wout_ecg_path = 'path/to/labels'
+    output_path = 'path/to/output'
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
