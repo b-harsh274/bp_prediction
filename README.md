@@ -6,13 +6,14 @@ This repository contains the implementation of ECG and PPG feature extraction us
 
 ## Project Structure
 
-- `DataPreprocessor.py`: Script for reading and preprocessing ECG data.
-- `TimeseriesUNetModel.py`: Script for creating the Time Series UNet model.
-- `Trainer.py`: Script for training the model with the preprocessed data.
-- `ecg_sig.txt`: Sample input file containing ECG signals.
-- `ecg_labels.txt`: Sample input file containing labels.
-- `requirements.txt`: List of required Python packages.
-
+- `data_preprocessor.py`: Script for reading and preprocessing ECG data.
+- `model.py`: Script for creating the Time Series UNet model.
+- `trainer.py`: Script for training the model with the preprocessed data.
+- `main.py`: Script to execute the model training.
+- `data/ecg_sig_1.txt`: Sample input file containing ECG signals.
+- `data/ecg_labels_.txt`: Sample input file containing ECG labels.
+- `data/ppg_sig_1.txt`: Sample input file containing PPG signals.
+- `data/ppg_labels_.txt`: Sample input file containing PPG labels.
 
 
 ## Additional Information
