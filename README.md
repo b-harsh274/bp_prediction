@@ -8,7 +8,7 @@ This repository contains the implementation of ECG and PPG feature extraction us
 
 - `data_preprocessor.py`: Script for reading and preprocessing ECG data.
 - `model.py`: Script for creating the Time Series UNet model.
-- `trainer.py`: Script for training the model with the preprocessed data.
+- `train.py`: Script for training the model with the preprocessed data.
 - `main.py`: Script to execute the model training.
 - `data`: Directory with sample input files containing ECG & PPG data.
 
