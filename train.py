@@ -27,7 +27,7 @@ class Trainer:
         self.model.compile(optimizer=Adam(learning_rate=start_lr), loss='binary_crossentropy')
 
         current_date = datetime.now().strftime('%d%m%y_%H%M')
-        checkpoint_path = os.path.join(self.output_path, f'cosmic_series_segmenation_model_weights_{current_date}.keras')
+        checkpoint_path = os.path.join(self.output_path, f'feature_extraction_model_weights_{current_date}.keras')
 
         model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
             filepath=checkpoint_path,
