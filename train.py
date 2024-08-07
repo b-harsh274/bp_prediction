@@ -12,9 +12,9 @@ class Trainer:
         self.output_path = output_path
         self.model = TimeseriesUNetModel().Timeseries_Unet()
 
-    def train_ecg(self, in_ecg_path, in_wout_ecg_path, epochs=300, split_ratio=0.15, start_lr=1e-4, warmup_lr=1e-5, step_drop=0.5, epoch_step=100, batch_size=4):
+    def train_ecg(self, signal_path, label_path, epochs=300, split_ratio=0.15, start_lr=1e-4, warmup_lr=1e-5, step_drop=0.5, epoch_step=100, batch_size=4):
         data_preprocessor = DataPreprocessor()
-        x, y = data_preprocessor.ecg_data_preprocess(in_ecg_path, in_wout_ecg_path)
+        x, y = data_preprocessor.ecg_data_preprocess(signal_path, label_path)
 
         if x is None or y is None:
             print('Data preprocessing failed, skipping execution')
