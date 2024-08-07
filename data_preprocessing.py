@@ -15,11 +15,11 @@ class DataPreprocessor:
         
         return df
 
-    def ecg_data_preprocess(self, in_ecg_path, in_wout_ecg_path):
+    def ecg_data_preprocess(self, signal_path, label_path):
         print('[INFO] Reading input file')
-        if os.path.isfile(in_ecg_path) and os.path.isfile(in_wout_ecg_path):
-            data = self.read_ecg_data(in_ecg_path)
-            rdata = self.read_ecg_data(in_wout_ecg_path)
+        if os.path.isfile(signal_path) and os.path.isfile(label_path):
+            data = self.read_ecg_data(signal_path)
+            rdata = self.read_ecg_data(label_path)
         else:
             print('Check input file path, skipping execution')
             return 0, 0
