@@ -39,10 +39,7 @@ class Trainer:
         )
 
         def step_decay(epoch):
-            initial_lr = start_lr  # Initial learning rate
-            drop_factor = step_drop  # Factor by which the learning rate will be reduced
-            epochs_drop = epoch_step  # Number of epochs after which the learning rate will be reduced
-            new_lr = initial_lr * tf.math.pow(drop_factor, tf.math.floor((1 + epoch) / epochs_drop))
+             new_lr = initial_lr * (drop_factor ** (epoch // epochs_drop))
             return float(new_lr)
 
         lr_scheduler = tf.keras.callbacks.LearningRateScheduler(step_decay, verbose=1)
